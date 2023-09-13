@@ -21,12 +21,8 @@ const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  console.log('id in page', id);
-
   const allProductDetails = useSelector((state) => state.productDetails);
   const { product } = allProductDetails;
-
-  console.log('product in page', product);
 
   useEffect(() => {
     dispatch(listproductDetails(id));

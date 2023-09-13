@@ -17,13 +17,7 @@ export const listproductDetails = createAsyncThunk(
       productList: { products },
     } = getState();
 
-    console.log('ID in reducer', id);
-    console.log('PRODUCTS in reducer', products);
-
     try {
-      // const product = products.filter((product) => product._id === id);
-
-      console.log('product in reducer', products[id]);
       return fulfillWithValue(products[id]);
     } catch (error) {
       console.error(error);
